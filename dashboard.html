@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Dashboard</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1><a href="index.html" class="home-link">Super Dashboard</a></h1>
+        <form id="search-form" class="search-form">
+            <input type="text" id="search-input" placeholder="Buscar filmes..." class="search-input">
+        </form>
+        <form id="country-search-form" class="search-form" style="display: none;">
+            <input type="text" id="country-search-input" placeholder="Buscar país..." class="search-input">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <nav class="main-nav">
+            <a href="#" id="view-toggle-link" class="nav-link"></a>
+            <button id="theme-toggle" title="Alterar tema"><i class="fas fa-sun"></i></button>
+        </nav>
+    </header>
+
+    <div id="movies-section">
+        <div class="genre-container">
+            <div class="filters-wrapper">
+                <button id="favorites-btn" class="genre-link"><i class="fas fa-heart"></i> Meus Favoritos</button>
+                <div id="genre-nav" class="genre-nav"></div>
+            </div>
+        </div>
+        <main id="content-area">
+            <div id="movie-grid" class="grid-container"></div>
+            <div id="pagination-container" class="pagination">
+                <button id="prev-page-btn">Anterior</button>
+                <span id="page-number">Página 1</span>
+                <button id="next-page-btn">Próxima</button>
+            </div>
+        </main>
+    </div>
+
+    <div id="map-section" style="display: none;">
+        <div id="map"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 | Desenvolvido por RICHARD V DUARTE</p>
+    </footer>
+
+    <div id="movie-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button class="close-modal-btn">&times;</button>
+            <div id="modal-body">
+                <div id="modal-trailer"></div>
+                <div id="modal-main-info" class="modal-details-flex"></div>
+                <div id="modal-cast" class="modal-section">
+                    <h3>Elenco Principal</h3>
+                    <div class="cast-grid"></div>
+                </div>
+                <div id="modal-similar" class="modal-section">
+                    <h3>Filmes Similares</h3>
+                    <div class="similar-movies-grid grid-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="actor-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button class="close-modal-btn">&times;</button>
+            <div id="actor-modal-body"></div>
+        </div>
+    </div>
+
+    <a href="#" id="back-to-top-btn" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #141414;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.landing-header h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #e50914;
+}
+
+.landing-header p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 3rem;
+}
+
+.choice-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.choice-card {
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 250px;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.choice-card:hover {
+    transform: translateY(-10px);
+    border-color: #e50914;
+}
+
+.choice-card h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.choice-card p {
+    color: #aaa;
+    line-height: 1.5;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    color: #555;
+    font-size: 0.9rem;
+}
